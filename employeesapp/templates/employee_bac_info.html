@@ -1,0 +1,100 @@
+{%extends 'base.html'%}
+{%block main_block%}
+
+
+<div class="container">
+
+    <a  class="con_a" href="{%url 'emp_basic_info'%}">Back</a>
+
+    <h3>Employeess'  Bank Account Details</h3>
+
+
+
+    <form method="get">
+
+        Filter by job: 
+
+        <select name="job" onchange="this.for.submit()" class="form-select">
+
+            <optiion value="" selected>--Select--</optiion>
+
+            <option value="all" {%if selected_job == "all"%} selected {%endif%}>All</option>
+            
+            {%for i in job_filter%}
+
+            <option value="{{i}}" {%if i == selected_job%} selected {%endif%}>{{i}}</option>
+        
+            {%endfor%}
+
+        </select><span><button type="submit">filter</button></span>
+
+
+    </form>
+
+
+    <table class="table table-stripped rounded border border-3 p-3">
+
+        <tr>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+            <th>Employee id</th>
+            <th>Job</th>
+            <th>Age</th>
+            <th>Mob. Contry Code</th>
+            <th>Phone</th>
+            <th>Email</th>
+
+
+            <th>Join Date</th>
+            <th>Min Charge</th>
+
+
+            <th>Account Holder</th>
+            <th>Account Number</th>
+            <th>Bank Name</th>
+            <th>Branch</th>
+            <th>Swift Code</th>
+
+        </tr>
+
+        {%for i in data%}
+
+        <tr>
+
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.full_name}}</td>
+            <td>{{i.employee_id}}</td>
+            <td>{{i.job}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.country_code}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.email}}</td>
+
+
+            <td>{{i.join_date}}</td>
+            <td>{{i.min_charge}}</td>
+
+
+            <td>{{i.account_holder}}</td>
+            <td>{{i.account_number}}</td>
+            <td>{{i.bank_name}}</td>
+            <td>{{i.branch}}</td>
+            <td>{{i.swift_code}}</td>
+
+
+        </tr>
+
+        {%endfor%}
+
+
+    </table>
+
+
+</div>
+
+{%endblock%}
+
+ 

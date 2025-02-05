@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block main_block%}
+
+
+
+<div class="container">
+
+
+
+    <br><br>
+
+    <center>
+
+        <form method="post" action="" class="form-control" enctype="multipart/form-data"> 
+
+            <!-- enctype -- image display -->
+
+            {%csrf_token%}
+
+            <table>
+
+                {{form.as_table}}
+
+
+            </table>
+
+            <br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+        
+    </center>
+
+
+
+
+
+
+
+</div>
+
+{%endblock%}

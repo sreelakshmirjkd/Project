@@ -1,0 +1,98 @@
+{%extends 'base.html'%}
+{%block main_block%}
+
+
+<div class="container">
+
+    <a href="{%url 'emp_basic_info'%}" class="con_a">Back</a>
+
+    <h3>Employeess' Personal Details</h3>
+
+
+    <form method="get">
+
+        Filter by job: 
+
+        <select name="job" onchange="this.for.submit()" class="form-select">
+
+            <optiion value="" selected>--Select--</optiion>
+
+            <option value="all" {%if selected_job == "all"%} selected {%endif%}>All</option>
+            
+            {%for i in job_filter%}
+
+            <option value="{{i}}" {%if i == selected_job%} selected {%endif%}>{{i}}</option>
+        
+            {%endfor%}
+
+        </select><span><button type="submit">filter</button></span>
+
+
+    </form>
+
+
+    <table class="table table-stripped rounded border border-3 p-3">
+
+        <tr>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+            <th>Employee id</th>
+            <th>Job</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mob. Contry Code</th>
+            <th>Phone</th>
+            <th>Emergerncy Contact</th>
+            <th>Email</th>
+            <th>Address Line 1</th>
+            <th>Adrees Line 2</th>
+            <th>State</th>
+            <th>City</th>
+            <th>District</th>
+            <th>Zip Code</th>
+
+
+            
+
+
+        </tr>
+
+        {%for i in data%}
+
+        <tr>
+
+            <td>{{i.first_name}}</td>
+            <td>{{i.last_name}}</td>
+            <td>{{i.full_name}}</td>
+            <td>{{i.employee_id}}</td>
+            <td>{{i.job}}</td>
+            <td>{{i.date_of_birth}}</td>
+            <td>{{i.age}}</td>
+            <td>{{i.gender}}</td>
+            <td>{{i.country_code}}</td>
+            <td>{{i.phone}}</td>
+            <td>{{i.emergency_contact}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.address_line_1}}</td>
+            <td>{{i.address_line_2}}</td>
+            <td>{{i.state}}</td>
+            <td>{{i.city}}</td>
+            <td>{{i.district}}</td>
+            <td>{{i.zip_code}}</td>
+        </tr>
+
+        
+        {%endfor%}
+
+
+    </table>
+
+
+</div>
+
+
+
+{%endblock%}

@@ -1,0 +1,108 @@
+{%extends 'base.html'%}
+{%block main_block%}
+
+
+<div class="container">
+
+    <a href="{%url 'emp_basic_info'%}" class="con_a">Back</a>
+
+
+    <h3>{{data.first_name}}'s Profile</h3>
+
+    <table class="table table-stripped rounded border border-3 p-3">
+
+        <tr>
+
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Full Name</th>
+            <th>Employee id</th>
+            <th>Job</th>
+            <th>Date of Birth</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mob. Contry Code</th>
+            <th>Phone</th>
+            <th>Emergerncy Contact</th>
+            <th>Email</th>
+            <th>Address Line 1</th>
+            <th>Adrees Line 2</th>
+            <th>State</th>
+            <th>City</th>
+            <th>District</th>
+            <th>Zip Code</th>
+
+
+            <th>Interview Date & Time</th>
+            <th>Join Date</th>
+            <th>Min Charge</th>
+            <th>Job - State</th>
+            <th>Job - District</th>
+            <th>Job - Taluk</th>
+            <th>Job - Village</th>
+
+
+            <th>Account Holder</th>
+            <th>Account Number</th>
+            <th>Bank Name</th>
+            <th>Branch</th>
+            <th>Swift Code</th>
+
+            
+
+
+        </tr>
+
+
+        <tr>
+
+            <td>{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.full_name}}</td>
+            <td>{{data.employee_id}}</td>
+            <td>{{data.job}}</td>
+            <td>{{data.date_of_birth}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.country_code}}</td>
+            <td>{{data.phone}}</td>
+            <td>{{data.emergency_contact}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.address_line_1}}</td>
+            <td>{{data.address_line_2}}</td>
+            <td>{{data.state}}</td>
+            <td>{{data.city}}</td>
+            <td>{{data.district}}</td>
+            <td>{{data.zip_code}}</td>
+
+
+            <td>{{data.interview_datetime}}</td>
+            <td>{{data.join_date}}</td>
+            <td>{{data.min_charge}}</td>
+            <td>{{data.job_state}}</td>
+            <td>{{data.job_district}}</td>
+            <td>{{data.job_taluk}}</td>
+            <td>{{data.job_village}}</td>
+
+
+
+            <td>{{data.account_holder}}</td>
+            <td>{{data.account_number}}</td>
+            <td>{{data.bank_name}}</td>
+            <td>{{data.branch}}</td>
+            <td>{{data.swift_code}}</td>
+
+
+
+        </tr>
+
+
+
+    </table>
+
+
+</div>
+
+
+
+{%endblock%}

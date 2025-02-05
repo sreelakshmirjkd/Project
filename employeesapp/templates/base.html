@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{%load static%}
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/24a3b9820b.js" crossorigin="anonymous"></script>
+  <!-- <link rel="stylesheet" href="{%static 'css/nbootstrap.min.css'%}"> -->
+  <style>
+    input{
+      
+      width: 500px;
+      margin-top: 10px;
+      margin-left: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      
+    }
+
+    select{
+      width: 500px;
+      margin-left: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      margin-top: 10px;
+
+    }
+
+    label{
+
+      width:200px;
+    }
+
+    button{
+      margin-top: 20px;
+      margin-bottom: 50px;
+      width: 350px;
+      height: 40px;
+      border-radius: 20px;
+      border-color: darkcyan;
+      color: rgb(255, 255, 255);
+      font: 500;
+      background-color:  darkcyan;
+      border:none;
+
+    }
+
+    .navbar{
+      background-color:  darkcyan;
+      margin-bottom: 30px;
+      
+    }
+    .navbar-brand{
+      color: white;
+
+    }
+    .nav-item{
+      color: white;
+
+    }
+    .con_a{
+      margin-left: 30px;
+      font-weight: 500;
+      font-size: medium;
+    }
+
+    h3{
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    table{
+      margin-top: 30px;
+    }
+
+
+  </style>
+  
+
+
+</head>
+
+<body>
+
+
+
+
+  <nav class="navbar sticky-top navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-location-dot"></i>&nbsp;&nbsp; Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  {%block main_block%}
+
+  {%endblock%}
+</body>
+
+</html>
